@@ -1,6 +1,6 @@
 export const Error404 = () => {
   const view = `
-    <p>Error404</p>
+    <h1>Error404</h1>
   `
   return view
 }

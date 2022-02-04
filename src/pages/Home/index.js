@@ -1,13 +1,9 @@
-import { Nav } from "../../components/Nav";
-import { Footer } from "../../components/Footer";
-import { ProductCard } from "../../components/ProductCard";
-import { getFromDatabase } from "../../utils/getFromDababase";
-import { LoggedNav } from "../../components/LoggedNav";
-import { user } from "../../login";
+import { Footer } from '../../components/Footer'
+import { ProductCard } from '../../components/ProductCard'
+import { getFromDatabase } from '../../utils/getFromDababase'
 
 export const Home = async () => {
-  console.log("home --- " + user.getUserAuth());
-  const products = await getFromDatabase("products");
+  const products = await getFromDatabase('products')
 
   const view = `
     <div class="home-container">
@@ -23,10 +19,10 @@ export const Home = async () => {
               product.description
             )
           )
-          .join("")}
-        ${Footer()}
+          .join('')}
       </main>
     </div>
-  `;
-  return view;
-};
+    ${Footer()}
+  `
+  return view
+}

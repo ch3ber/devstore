@@ -2,38 +2,38 @@
   "products": [
     {
       "id": 1,
-      "name": "Celular Caro",
-      "price": 10000,
-      "preview": "../src/assets/img/expensive-phone.jpg",
-      "description": "Este es un celular caro, no lo compres gracias:)"
+      "name": "Alimento para hamster",
+      "price": 75,
+      "preview": "../src/assets/img/alimentoParaHamster.jpg",
+      "description": "Alimento con nutrientes y semillas variadas para hamsters"
     },
     {
       "id": 2,
-      "name": "Husky",
-      "price": 10000,
-      "preview": "../src/assets/img/expensive-phone.jpg",
-      "description": "Este es un celular caro, no lo compres gracias:)"
+      "name": "Jugete para perro",
+      "price": 129,
+      "preview": "../src/assets/img/jueguteParaPerro.jpg",
+      "description": "Juguete para merro hecho de fibras de alta calidad para no romperse"
     },
     {
       "id": 3,
-      "name": "Celular Caro",
-      "price": 10000,
-      "preview": "../src/assets/img/expensive-phone.jpg",
-      "description": "Este es un celular caro, no lo compres gracias:)"
+      "name": "Bolsa para hamster",
+      "price": 349,
+      "preview": "../src/assets/img/bolaParaHamster.jpg",
+      "description": "Bolsa para hamster de colores variasdos y tres tipos de tamaños para tu hamster"
     },
     {
       "id": 4,
-      "name": "Celular Caro",
-      "price": 10000,
-      "preview": "../src/assets/img/expensive-phone.jpg",
-      "description": "Este es un celular caro, no lo compres gracias:)"
+      "name": "Decoracion de pecera",
+      "price": 299,
+      "preview": "../src/assets/img/kitDecoracionPecera.jpg",
+      "description": "Kit de decoracion para pecera"
     },
     {
       "id": 5,
-      "name": "Celular Caro",
-      "price": 10000,
-      "preview": "../src/assets/img/expensive-phone.jpg",
-      "description": "Este es un celular caro, no lo compres gracias:)"
+      "name": "Haula para cuyos",
+      "price": 799,
+      "preview": "../src/assets/img/haulaParaCuyos.jpg",
+      "description": "Haula de metal para cuyos de 2 piezas"
     }
   ],
   "users": [
