@@ -1,0 +1,16 @@
+.product-card {
+  max-width: 20rem;
+  background-color: var(--backgroundColorLigth);
+}
+.product-card__content {
+  padding: 1rem;
+}
+.product-card__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-card__button {
+  padding: 1rem;
+  background-color: var(--primaryColor);
+}

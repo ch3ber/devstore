@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Celular Caro",
+      "price": 10000,
+      "preview": "../src/assets/img/expensive-phone.jpg",
+      "description": "Este es un celular caro, no lo compres gracias:)"
+    },
+    {
+      "id": 2,
+      "name": "Husky",
+      "price": 10000,
+      "preview": "../src/assets/img/expensive-phone.jpg",
+      "description": "Este es un celular caro, no lo compres gracias:)"
+    },
+    {
+      "id": 3,
+      "name": "Celular Caro",
+      "price": 10000,
+      "preview": "../src/assets/img/expensive-phone.jpg",
+      "description": "Este es un celular caro, no lo compres gracias:)"
+    },
+    {
+      "id": 4,
+      "name": "Celular Caro",
+      "price": 10000,
+      "preview": "../src/assets/img/expensive-phone.jpg",
+      "description": "Este es un celular caro, no lo compres gracias:)"
+    },
+    {
+      "id": 5,
+      "name": "Celular Caro",
+      "price": 10000,
+      "preview": "../src/assets/img/expensive-phone.jpg",
+      "description": "Este es un celular caro, no lo compres gracias:)"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Eber Alejo",
+      "img": "../src/assets/img/user-1.jpg",
+      "money": 9999,
+      "isLogged": false
+    },
+    {
+      "id": 2,
+      "name": "Mario Bros",
+      "img": "../src/assets/img/user-1.jpg",
+      "money": 2835,
+      "isLogged": false
+    },
+    {
+      "id": 3,
+      "name": "Nombre Random",
+      "img": "../src/assets/img/user-1.jpg",
+      "money": 1854,
+      "isLogged": false
+    }
+  ]
+}

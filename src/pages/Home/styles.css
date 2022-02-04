@@ -1,0 +1,14 @@
+.home-container {
+  max-width: 90%;
+  padding: 2rem;
+  padding-bottom: 15rem;
+}
+.home-container__title {
+  margin-bottom: 2rem;
+}
+.home-container__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  grid-gap: 3rem;
+  justify-content: center;
+}

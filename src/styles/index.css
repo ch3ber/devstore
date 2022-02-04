@@ -1,0 +1,15 @@
+/* base */
+@import "./normalize.css";
+@import "./vars.css";
+@import "./globals.css";
+
+/* layout */
+@import "../pages/Cart/styles.css";
+@import "../pages/Error404/styles.css";
+@import "../pages/Home/styles.css";
+@import "../pages/Login/styles.css";
+
+@import "../components/ProductCard/styles.css";
+@import "../components/Footer/styles.css";
+@import "../components/LoginCard/styles.css";
+@import "../components/Nav/styles.css";
