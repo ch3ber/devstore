@@ -1,5 +1,3 @@
-import { user } from '../../login'
-
 export const LoggedNav = () => {
   const view = `
     <nav class="nav">
@@ -11,13 +9,13 @@ export const LoggedNav = () => {
           <a href="/" class="nav__link">Home</a>
         </li>
         <li>
+          <a href="/#/requirements" class="nav__link" >Requirements</a>
+        </li>
+        <li>
           <a href="/#/Cart" class="nav__link">View Cart</a>
         </li>
         <li>
-          <button class="nav__link nav__link--gosth-button">LogOut</button>
-        </li>
-        <li>
-          <p class="logged-nav__container-username">Hola! <span class="logged-nav__username">${user.name}</span></p>
+          <button class="nav__link nav__link--gosth-button logOutButton">LogOut</button>
         </li>
       </ul>
     </nav>

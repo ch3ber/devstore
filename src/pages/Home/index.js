@@ -8,6 +8,7 @@ export const Home = async () => {
   const view = `
     <div class="home-container">
       <h1 class="home-container__title">Products</h1>
+      <p>Encuentra los productos mas populares de mascotas aqui</p>
       <main class="home-container__products">
         ${products
           .map((product) =>

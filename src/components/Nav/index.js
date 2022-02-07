@@ -1,5 +1,4 @@
 export const Nav = () => {
-  console.log('render nav')
   const view = `
     <nav class="nav">
       <a href="/" class="nav__link">
@@ -7,7 +6,13 @@ export const Nav = () => {
       </a>
       <ul class="nav__list">
         <li>
-          <button class="nav__link nav__link--button" id="loginButton">Login</button>
+          <a href="/" class="nav__link">Home</a>
+        </li>
+        <li>
+          <a href="/#/requirements" class="nav__link" >Requirements</a>
+        </li>
+        <li>
+          <button class="nav__link nav__link--button logInButton" >Login</button>
         </li>
       </ul>
     </nav>

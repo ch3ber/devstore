@@ -1,7 +1,7 @@
 export const getFromDatabase = async (query) => {
-  const apiUrl = '../../../api/db.json'
+  const API_URL = '../../../api/db.json'
   try {
-    const response = await window.fetch(apiUrl)
+    const response = await window.fetch(API_URL)
     const data = await response.json()
     return data[query]
   } catch (error) {
