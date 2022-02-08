@@ -1,11 +1,11 @@
 {
   "name": "eiao-pet-store",
   "version": "0.0.0",
-  "homepage": "https://ch3ber.gihub.io/eiao-pet-store",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
