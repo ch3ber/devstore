@@ -5,11 +5,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "vite build && bash predeploy.sh"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "standard": "16.0.4",
     "vite": "2.7.2"
   },
