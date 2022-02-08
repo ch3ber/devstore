@@ -2,59 +2,61 @@ import { STORAGE_CONFIG } from '../config'
 
 class AppLocalstorage {
   constructor (sotrageConfig) {
-    this.key = sotrageConfig.name
+    this.storageName = sotrageConfig.name
     this.defaultContent = sotrageConfig.content
+    this.createStorage()
   }
 
+
   #refreshStorage (content) {
-    window.localStorage.setItem(this.key, JSON.stringify(content))
+    window.localStorage.setItem(this.storageName, JSON.stringify(content))
   }
 
   // create a storare if no exist before
   createStorage () {
-    if (window.localStorage.length === 0) {
-      window.localStorage.setItem(this.key, JSON.stringify(this.defaultContent))
+    const STORAGE_ELEMENTS = window.localStorage.length
+    if (STORAGE_ELEMENTS === 0) {
+      window.localStorage.setItem(this.storageName, JSON.stringify(this.defaultContent))
     }
   }
 
   // return all content of storage
   getAllStorage () {
-    const resonse = window.localStorage.getItem(this.key)
-    return JSON.parse(resonse)
+    const JSON_STORAGE = window.localStorage.getItem(this.storageName)
+    return JSON.parse(JSON_STORAGE)
   }
 
   // return a single item from key
   getItem (item) {
-    const resonse = window.localStorage.getItem(this.key)
-    const data = JSON.parse(resonse)
-    return data[item]
+    const JSON_STORAGE = window.localStorage.getItem(this.storageName)
+    const parceStorage = JSON.parse(JSON_STORAGE)
+    return parceStorage[item]
   }
 
   // change a single item
   setItem (key, item) {
-    const newContent = this.getAllStorage()
-    newContent[key] = item
-    this.#refreshStorage(newContent)
+    const newContentStorage = this.getAllStorage()
+    newContentStorage[key] = item
+    this.#refreshStorage(newContentStorage)
   }
 
   // add a item into the other item
   addItem (key, item) {
-    const newContent = this.getAllStorage()
-    newContent[key].push(item)
-    this.#refreshStorage(newContent)
+    const newContentStorage = this.getAllStorage()
+    newContentStorage[key].push(item)
+    this.#refreshStorage(newContentStorage)
   }
 
   // delete a specific item
   delteItem (key, item) {
-    const newContent = this.getAllStorage()
+    const newContentStorage = this.getAllStorage()
 
-    const index = newContent[key].indexOf(item)
-    if (index > -1) {
-      newContent[key].splice(index, 1)
+    const indexOfItem = newContentStorage[key].indexOf(item)
+    if (indexOfItem > -1) {
+      newContentStorage[key].splice(indexOfItem, 1)
     }
-    this.#refreshStorage(newContent)
+    this.#refreshStorage(newContentStorage)
   }
 }
 
 export const appStorage = new AppLocalstorage(STORAGE_CONFIG)
-appStorage.createStorage()

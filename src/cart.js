@@ -1,29 +1,22 @@
 import { appStorage } from './utils/localstorage'
-import { router } from './router'
 
 class Cart {
-  async addProduct (event) {
-    const product = event.path[3].dataset.id
-    console.log(product)
+  addProduct (event) {
+    const PRODUCT_ID_PATH = event.path[3].dataset.id
 
-    if (appStorage.getItem('selectProducts').includes(product.toString())) {
+    if (appStorage.getItem('cart').includes(PRODUCT_ID_PATH.toString())) {
       return
     }
-    console.log(product)
-    appStorage.addItem('selectProducts', product)
-    console.log(appStorage.getItem('selectProducts'))
+    appStorage.addItem('cart', PRODUCT_ID_PATH)
   }
 
-  async deleteProduct (event) {
-    console.log(event)
-    const product = event.path[1].childNodes[1].dataset.id
-    console.log(product)
-    appStorage.delteItem('selectProducts', product)
-    console.log(appStorage.getItem('selectProducts'))
+  deleteProduct (event) {
+    const PRODUCT_ID_PATH = event.path[1].childNodes[1].dataset.id
+    appStorage.delteItem('cart', PRODUCT_ID_PATH)
   }
 
   clearCart () {
-    appStorage.setItem('selectProducts', [])
+    appStorage.setItem('cart', [])
   }
 }
 

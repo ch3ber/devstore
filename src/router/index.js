@@ -2,7 +2,7 @@ import { user, logIn, logOut } from '../login'
 import { routes } from './index.routes'
 import { Nav } from '../components/Nav'
 import { LoggedNav } from '../components/LoggedNav'
-import { loadListener, loadListeners } from '../utils/loadListeners'
+import { loadListener, loadListeners, loadRecursiveListener } from '../utils/loadListeners'
 import { cart } from '../cart'
 
 class Router {
@@ -12,17 +12,22 @@ class Router {
     )
   }
 
-  getContentOfRoute () {
+  async getContentOfRoute () {
     const route = this.getNameRoute()
-    return routes[route] ? routes[route].template : routes.error404.template
+    return routes[route] ? await routes[route].template() : routes.error404.template()
   }
 
   // render into the html
-  async render (id, idNav) {
-    const container = document.getElementById(id)
-    const nav = document.getElementById(idNav)
-    container.innerHTML = await router.getContentOfRoute()
-    nav.innerHTML = user.getUserAuth() ? LoggedNav() : Nav()
+  async render ({ containerId = null, navId = null }) {
+    if (navId !== null) {
+      const nav = document.getElementById(navId)
+      nav.innerHTML = user.getUserAuth() ? LoggedNav() : Nav()
+    }
+
+    if (containerId !== null) {
+      const container = document.getElementById(containerId)
+      container.innerHTML = await router.getContentOfRoute()
+    }
   }
 }
 
@@ -30,7 +35,7 @@ export const router = new Router()
 
 // this function execute if change the url
 export const changeRoute = async () => {
-  await router.render('app', 'nav')
+  await router.render({ containerId: 'app', navId: 'nav' })
 
   // load eventlisteners after render app
   user.getUserAuth()
@@ -46,12 +51,25 @@ export const changeRoute = async () => {
 
   // listeners for cart page
   if (router.getNameRoute() === 'cart') {
-    loadListeners('cart__delete-button', 'click', async (event) => {
-      cart.deleteProduct(event)
+    await loadRecursiveListener({
+      id: 'cart__delete-button',
+      listenerFunc: cartListeners
     })
 
-    loadListener('cart__buy-button', 'click', () => {
-      cart.clearCart()
+    await loadRecursiveListener({
+      id: 'cart__buy-button',
+      listenerFunc: callClearCart
     })
   }
+}
+
+async function callClearCart () {
+  cart.clearCart()
+  await router.render({ containerId: 'app' })
+}
+
+async function cartListeners (event) {
+  cart.deleteProduct(event)
+  await router.render({ containerId: 'app' })
+  loadListener('cart__buy-button', 'click', callClearCart)
 }

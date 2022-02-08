@@ -30,7 +30,7 @@ export const user = new User('User', appStorage.getItem('isUserLogged'))
 export async function logIn () {
   user.setAuth({ auth: [true] })
   appStorage.setItem('isUserLogged', true)
-  await router.render('app', 'nav')
+  await router.render({ navId: 'nav' })
   loadListener('logOutButton', 'click', logOut)
 }
 
@@ -39,6 +39,6 @@ export async function logOut () {
   user.setAuth({ auth: [false] })
   appStorage.setItem('isUserLogged', false)
   cart.clearCart()
-  await router.render('app', 'nav')
+  await router.render({ navId: 'nav' })
   loadListener('logInButton', 'click', logIn)
 }

@@ -7,22 +7,22 @@ import { Requirements } from '../pages/Requirements'
 export const routes = {
   root: {
     path: '/',
-    template: Home()
+    template: Home
   },
   cart: {
     path: '/cart',
-    template: Cart()
+    template: Cart
   },
   login: {
     path: '/login',
-    template: Login()
+    template: Login
   },
   requirements: {
     path: '/requirements',
-    template: Requirements()
+    template: Requirements
   },
   error404: {
     path: '/error404',
-    template: Error404()
+    template: Error404
   }
 }

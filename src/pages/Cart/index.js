@@ -4,7 +4,7 @@ import { ProductCard } from '../../components/ProductCard'
 import { getFromDatabase } from '../../utils/getFromDababase'
 
 export const Cart = async () => {
-  const userProducts = await appStorage.getItem('selectProducts')
+  const userProducts = await appStorage.getItem('cart')
   const dbProducts = await getFromDatabase('products')
 
   const cart = []

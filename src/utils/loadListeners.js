@@ -9,3 +9,10 @@ export function loadListeners (id, type, func) {
     el.addEventListener(type, func)
   })
 }
+
+export async function loadRecursiveListener ({ id, type = 'click', listenerFunc }) {
+  loadListeners(id, type, async (event) => {
+    await listenerFunc(event)
+    loadRecursiveListener({ id, type, listenerFunc })
+  })
+}
