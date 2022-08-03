@@ -2,66 +2,45 @@
   "products": [
     {
       "id": 1,
-      "name": "Alimento para hamster",
-      "price": 75,
-      "preview": "../src/assets/img/alimentoParaHamster.jpg",
-      "description": "Contiene los nutrientes y semillas que tu hamster necesita"
+      "name": "Invertocat Hoodie",
+      "price": 60,
+      "preview": "../src/assets/img/Invertocat_2.0_Hoodie_Mock_GithubShop-1_882x882.webp",
+      "description": "Black, white and has the GitHub logo! the best hoodie you can buy"
     },
     {
       "id": 2,
-      "name": "Jugete para perro",
-      "price": 129,
-      "preview": "../src/assets/img/jueguteParaPerro.jpg",
-      "description": "Fabricado con los materiales mas resistentes para horas de juego"
+      "name": "Invertocat Pride Hoodie",
+      "price": 60,
+      "preview": "../src/assets/img/WebShop_Hoodie_Pride2022_Black_Pride_882x882.webp",
+      "description": "Black, white and has the GitHub logo! the best hoodie you can buy."
     },
     {
       "id": 3,
-      "name": "Bolsa para hamster",
-      "price": 349,
-      "preview": "../src/assets/img/bolaParaHamster.jpg",
-      "description": "Lleva a tu hamster a todos lados y con estilo. Colores variados"
+      "name": "Logo Sticker Pack",
+      "price": 5,
+      "preview": "../src/assets/img/Capsule_Pack_6_882x882.webp",
+      "description": "Do you like stickers? me too. You can find many stickers in this fabulous pack"
     },
     {
       "id": 4,
-      "name": "Decoracion de pecera",
-      "price": 299,
-      "preview": "../src/assets/img/kitDecoracionPecera.jpg",
-      "description": "Kit de decoracion para pecera"
+      "name": "Invertocat 2.0 Beanie",
+      "price": 22,
+      "preview": "../src/assets/img/Webshop_18949_146_IE313_Black_1_882x882.webp",
+      "description": "Keep your head warm and the code flowing with the updated Invertocat 2.0"
     },
     {
       "id": 5,
-      "name": "Product 5 Title",
-      "price": 123,
-      "preview": "../src/assets/img/haulaParaCuyos.jpg",
-      "description": "Haula de metal para cuyos de 2 piezas"
+      "name": "CORKCICLE Canteen",
+      "price": 52,
+      "preview": "../src/assets/img/Proof_20682_100484-006_IE313_1_882x882.webp",
+      "description": "25 oz. triple insulated, vacuum sealed canteen with easy-grip flag sides and non-slip bottom."
     },
     {
       "id": 6,
-      "name": "Product 6 Title",
-      "price": 123,
-      "preview": "../src/assets/img/haulaParaCuyos.jpg",
-      "description": "Haula de metal para cuyos de 2 piezas"
-    },
-    {
-      "id": 7,
-      "name": "Product 7 Title",
-      "price": 123,
-      "preview": "../src/assets/img/haulaParaCuyos.jpg",
-      "description": "Haula de metal para cuyos de 2 piezas"
-    },
-    {
-      "id": 8,
-      "name": "Product 8 Title",
-      "price": 123,
-      "preview": "../src/assets/img/haulaParaCuyos.jpg",
-      "description": "Haula de metal para cuyos de 2 piezas"
-    },
-    {
-      "id": 9,
-      "name": "Product 9 Title",
-      "price": 123,
-      "preview": "../src/assets/img/haulaParaCuyos.jpg",
-      "description": "Haula de metal para cuyos de 2 piezas"
+      "name": "npm shirt",
+      "price": 30,
+      "preview": "../src/assets/img/WebShop_TShirt_NPM_v3_M_VintageBlk_882x882.webp",
+      "description": "Natural potato magnet. Nervously placed memes. Novel programming merchandise."
     }
   ],
   "users": [

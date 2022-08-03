@@ -3,8 +3,13 @@ export const Footer = () => {
     <footer class="mt-12 p-10 bg-zinc-100 w-full">
       <div class="mx-auto flex flex-col md:flex-row gap-7 justify-between max-w-5xl">
         <section>
-          <h2 class="text-zinc-600 text-xl">About</h2>
+          <h2 class="text-zinc-600 text-xl">Developer</h2>
           <p class="text-lg text-zinc-500">Eber Alejo - Web Dev</p>
+        </section>
+
+        <section>
+          <h2 class="text-zinc-600 text-xl">Credits</h2>
+          <p class="text-zinc-500">Product images are from the official <a class="underline hover:text-zinc-400" href="https://thegithubshop.com" target="_blank">GitHub Shop</a></p>
         </section>
     
         <section>
