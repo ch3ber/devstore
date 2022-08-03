@@ -11,13 +11,13 @@ export const Footer = () => {
           <h2 class="text-zinc-600 text-xl">Links</h2>
           <ul class="text-zinc-500 flex gap-5">
             <li>
-              <a class="hover:text-zinc-400 hover:underline" href="https://github.com/ch3ber" target="_blank">GitHub</a>
+              <a class="hover:text-zinc-400 hover:underline" href="https://github.com/ch3ber" target="_blank"><span class="mr-2"><i class="fa-brands fa-github"></i></span>GitHub</a>
             </li>
             <li>
-              <a class="hover:text-zinc-400 hover:underline" href="https://twitter.com/ch3ber_dev" target="_blank">Twitter</a>
+              <a class="hover:text-zinc-400 hover:underline" href="https://twitter.com/ch3ber_dev" target="_blank"><span class="mr-2"><i class="fa-brands fa-twitter"></i></span>Twitter</a>
             </li>
             <li>
-              <a class="hover:text-zinc-400 hover:underline" href="https://ch3ber.github.io" target="_blank">Web</a>
+              <a class="hover:text-zinc-400 hover:underline" href="https://ch3ber.github.io" target="_blank"><span class="mr-2"><i class="fa-solid fa-globe"></i></span>Web</a>
             </li>
           </ul>
         </section>

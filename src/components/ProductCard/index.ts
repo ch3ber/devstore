@@ -14,9 +14,9 @@ export const ProductCard = (
         <h2 class="font-bold text-lg">${name}</h2>
         <p class="h-24">${description}</p>
         <p class="text-zinc-600 text-sm">$${price} MXN</p>
-        <footer class="flex gap-3">
-          <a class="px-4 py-2 border border-violet-200 rounded text-violet-900 transition hover:bg-violet-50" href="/#/detail">Detail</a>
-          <button class="${ADD_TO_CART_ID_BUTTON} px-4 py-2 bg-violet-200 rounded text-violet-900 transition hover:bg-violet-300">Add to cart</button>
+        <footer class="flex gap-3 mt-3">
+          <a class="px-4 py-2 border border-sky-200 rounded text-sky-900 transition hover:bg-sky-50" href="/#/detail">Detail</a>
+          <button class="${ADD_TO_CART_ID_BUTTON} px-4 py-2 bg-sky-200 rounded text-sky-900 transition hover:bg-sky-300">Add to cart</button>
         </footer>
       </div>
     </article>
