@@ -8,16 +8,16 @@ export const LoggedNav = (): string => {
       <h2 class="text-zinc-900 text-4xl font-bold">DevStore</h2>
       <ul class="flex gap-7 items-center justify-center flex-wrap md:flex-nowrap">
         <li>
-          <a href="/" class="${LINK_STYLES}"><span><i class="fa-solid fa-house"></i></span>Home</a>
+          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-house"></i></span>Home</a>
         </li>
         <li>
-          <a href="/" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
+          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
         </li>
         <li>
-          <a href="/" class="${LINK_STYLES}"><span><i class="fa-solid fa-laptop-code"></i></span>Laptops</a>
+          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-regular fa-note-sticky"></i></span>Stickers</a>
         </li>
         <li>
-          <a href="/" class="${LINK_STYLES}"><span><i class="fa-solid fa-mug-saucer"></i></span>Coffe</a>
+          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
         </li>
         <li>
           <a href="/#/Cart" class="${LINK_STYLES}"><span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
