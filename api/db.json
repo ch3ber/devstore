@@ -5,21 +5,21 @@
       "name": "Alimento para hamster",
       "price": 75,
       "preview": "../src/assets/img/alimentoParaHamster.jpg",
-      "description": "Alimento con nutrientes y semillas variadas para hamsters"
+      "description": "Contiene los nutrientes y semillas que tu hamster necesita"
     },
     {
       "id": 2,
       "name": "Jugete para perro",
       "price": 129,
       "preview": "../src/assets/img/jueguteParaPerro.jpg",
-      "description": "Juguete para merro hecho de fibras de alta calidad para no romperse"
+      "description": "Fabricado con los materiales mas resistentes para horas de juego"
     },
     {
       "id": 3,
       "name": "Bolsa para hamster",
       "price": 349,
       "preview": "../src/assets/img/bolaParaHamster.jpg",
-      "description": "Bolsa para hamster de colores variasdos y tres tipos de tamaños para tu hamster"
+      "description": "Lleva a tu hamster a todos lados y con estilo. Colores variados"
     },
     {
       "id": 4,
@@ -30,8 +30,36 @@
     },
     {
       "id": 5,
-      "name": "Haula para cuyos",
-      "price": 799,
+      "name": "Product 5 Title",
+      "price": 123,
+      "preview": "../src/assets/img/haulaParaCuyos.jpg",
+      "description": "Haula de metal para cuyos de 2 piezas"
+    },
+    {
+      "id": 6,
+      "name": "Product 6 Title",
+      "price": 123,
+      "preview": "../src/assets/img/haulaParaCuyos.jpg",
+      "description": "Haula de metal para cuyos de 2 piezas"
+    },
+    {
+      "id": 7,
+      "name": "Product 7 Title",
+      "price": 123,
+      "preview": "../src/assets/img/haulaParaCuyos.jpg",
+      "description": "Haula de metal para cuyos de 2 piezas"
+    },
+    {
+      "id": 8,
+      "name": "Product 8 Title",
+      "price": 123,
+      "preview": "../src/assets/img/haulaParaCuyos.jpg",
+      "description": "Haula de metal para cuyos de 2 piezas"
+    },
+    {
+      "id": 9,
+      "name": "Product 9 Title",
+      "price": 123,
       "preview": "../src/assets/img/haulaParaCuyos.jpg",
       "description": "Haula de metal para cuyos de 2 piezas"
     }

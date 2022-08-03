@@ -1,7 +1,7 @@
-import { appStorage } from './utils/localstorage'
+import { appStorage } from '@utils/localstorage'
 
 class Cart {
-  addProduct (event) {
+  addProduct (event: any) {
     const PRODUCT_ID_PATH = event.path[3].dataset.id
 
     if (appStorage.getItem('cart').includes(PRODUCT_ID_PATH.toString())) {
@@ -10,12 +10,12 @@ class Cart {
     appStorage.addItem('cart', PRODUCT_ID_PATH)
   }
 
-  deleteProduct (event) {
+  deleteProduct (event: any) {
     const PRODUCT_ID_PATH = event.path[1].childNodes[1].dataset.id
     appStorage.delteItem('cart', PRODUCT_ID_PATH)
   }
 
-  clearCart () {
+  clear () {
     appStorage.setItem('cart', [])
   }
 }

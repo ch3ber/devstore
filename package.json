@@ -5,16 +5,24 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && bash predeploy.sh"
+    "deploy": "vite build && bash predeploy.sh",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.30.7",
+    "@typescript-eslint/parser": "5.30.7",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.20.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.4",
+    "eslint-plugin-promise": "6.0.0",
+    "postcss": "^8.4.14",
     "standard": "16.0.4",
-    "vite": "2.7.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "./node_modules/standard/eslintrc.json"
-    ]
+    "tailwindcss": "^3.1.7",
+    "typescript": "4.7.4",
+    "vite": "3.0.4"
   },
   "keywords": [],
   "description": "school project"

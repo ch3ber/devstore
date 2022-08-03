@@ -1,21 +1,23 @@
-import { appStorage } from '../utils/localstorage'
-import { router } from '../router'
-import { loadListener } from '../utils/loadListeners'
+import { appStorage } from '@utils/localstorage'
+import { loadListener } from '@utils/loadListeners'
 import { cart } from '../cart'
+import { renderNav } from '@utils/renderNav'
 
 class User {
-  constructor (name, isLogged) {
+  name: string
+  state: {
+    auth: Array<boolean>;
+  }
+
+  constructor (name: string, isLogged: boolean) {
     this.name = name
     this.state = { auth: [isLogged] } // create state
   }
 
   // set state
-  setAuth (value) {
-    for (const key in value) {
-      if (this.state.hasOwnProperty) {
-        this.state[key] = value[key]
-      }
-    }
+
+  setAuth (value: boolean): void {
+    this.state.auth[0] = value
   }
 
   // return a boolean
@@ -28,17 +30,18 @@ export const user = new User('User', appStorage.getItem('isUserLogged'))
 
 //  function for the login button
 export async function logIn () {
-  user.setAuth({ auth: [true] })
+  user.setAuth(true)
   appStorage.setItem('isUserLogged', true)
-  await router.render({ navId: 'nav' })
+  await renderNav()
   loadListener('logOutButton', 'click', logOut)
 }
 
 // function for the logout button
 export async function logOut () {
-  user.setAuth({ auth: [false] })
+  cart.clear()
+  user.setAuth(false)
   appStorage.setItem('isUserLogged', false)
-  cart.clearCart()
-  await router.render({ navId: 'nav' })
+  window.location.hash = '/'
+  await renderNav()
   loadListener('logInButton', 'click', logIn)
 }
