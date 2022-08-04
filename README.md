@@ -6,7 +6,7 @@ SPA created without javascript frameworks
 
 https://ch3ber-devstore.netlify.app/
 
-![App demo](https://github.com/ch3ber/devstore/blob/main/docs/preview.png)
+![App demo](./docs/preview.png)
 
 ## Features
 
