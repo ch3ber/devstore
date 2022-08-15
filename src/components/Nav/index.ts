@@ -1,3 +1,5 @@
+import { BUTTONS_IDS } from '@models/elementsID'
+
 export const Nav = (): string => {
   const LINK_STYLES =
     'flex flex-col gap-1 items-center border border-zinc-200 px-4 py-2 rounded text-zinc-700 transition hover:bg-zinc-100 hover:-translate-y-2'
@@ -19,14 +21,10 @@ export const Nav = (): string => {
           <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
         </li>
         <li>
-          <button id="logInButton" class="${LINK_STYLES}" ><span><i class="fa-solid fa-right-to-bracket"></i></span>LogIn</button>
+          <button id="${BUTTONS_IDS.LOG_IN}" class="${LINK_STYLES}" ><span><i class="fa-solid fa-right-to-bracket"></i></span>LogIn</button>
         </li>
       </ul>
     </nav>
   `
   return view
 }
-
-// <li>
-// <a href="/#/login" class="nav__link nav__link--button">Login</a>
-// </li>

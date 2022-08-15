@@ -1,5 +1,5 @@
-import { Footer } from '../../components/Footer'
-import { getFromDatabase } from '../../utils/getFromDababase'
+import { Footer } from '@components/Footer'
+import { getFromDatabase } from '@utils/getFromDababase'
 
 export const Login = async () => {
   const users = await getFromDatabase('users')

@@ -9,7 +9,10 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@login': path.resolve(__dirname, './src/login'),
       '@utils': path.resolve(__dirname, './src/utils'),
-      '@pages': path.resolve(__dirname, './src/pages')
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@models': path.resolve(__dirname, './src/models'),
+      '@cart': path.resolve(__dirname, './src/cart.ts'),
+      '@config': path.resolve(__dirname, './src/config.ts')
     }
   }
 })

@@ -1,6 +1,6 @@
 import { appStorage } from '@utils/localstorage'
 import { loadListener } from '@utils/loadListeners'
-import { cart } from '../cart'
+import { cart } from '@cart'
 import { renderNav } from '@utils/renderNav'
 
 class User {

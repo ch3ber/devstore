@@ -1,4 +1,4 @@
-import { routes } from './index.routes'
+import { routes } from '@router/index.routes'
 
 export class Router {
   private static instance: Router

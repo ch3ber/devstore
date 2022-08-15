@@ -1,5 +1,7 @@
-export const LoggedNav = (): string => {
-  const LOG_OUT_BUTTON_ID = 'logOutButton'
+import { ComponentView } from '@models/component'
+import { BUTTONS_IDS } from '@models/elementsID'
+
+export const LoggedNav = (): ComponentView => {
   const LINK_STYLES =
     'flex flex-col gap-1 items-center border border-zinc-200 px-4 py-2 rounded text-zinc-700 transition hover:bg-zinc-100 hover:-translate-y-2'
 
@@ -23,7 +25,7 @@ export const LoggedNav = (): string => {
           <a href="/#/Cart" class="${LINK_STYLES}"><span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
         </li>
         <li>
-          <button id="${LOG_OUT_BUTTON_ID}" class="${LINK_STYLES}" ><span><i class="fa-regular fa-circle-xmark"></i></span>LogOut</button>
+          <button id=${BUTTONS_IDS.LOG_OUT} class="${LINK_STYLES}" ><span><i class="fa-regular fa-circle-xmark"></i></span>LogOut</button>
         </li>
       </ul>
     </nav>

@@ -1,6 +1,6 @@
-import { Layout } from '../../components/Layout'
-import { ProductCard } from '../../components/ProductCard'
-import { getFromDatabase } from '../../utils/getFromDababase'
+import { Layout } from '@components/Layout'
+import { ProductCard } from '@components/ProductCard'
+import { getFromDatabase } from '@utils/getFromDababase'
 
 export const Home = async (): Promise<string> => {
   const products = await getFromDatabase('products')

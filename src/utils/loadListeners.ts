@@ -1,6 +1,6 @@
 import { Router } from '@router/index'
 import { refreshUI } from '@utils/refreshUI'
-import { cart } from '../cart'
+import { cart } from '@cart'
 
 export function loadListener (id: string, type: string, func: any) {
   const element: HTMLElement = document.getElementById(`${id}`)!
