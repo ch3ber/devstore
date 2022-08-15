@@ -12,7 +12,8 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, './src/pages'),
       '@models': path.resolve(__dirname, './src/models'),
       '@cart': path.resolve(__dirname, './src/cart.ts'),
-      '@config': path.resolve(__dirname, './src/config.ts')
+      '@config': path.resolve(__dirname, './src/config.ts'),
+      '@routes': path.resolve(__dirname, './src/routes')
     }
   }
 })

@@ -2,8 +2,9 @@ import { appStorage } from '@utils/localstorage'
 import { ProductCard } from '@components/ProductCard'
 import { getFromDatabase } from '@utils/getFromDababase'
 import { Layout } from '@components/Layout'
+import { ComponentView } from '@models/component'
 
-export const Cart = async () => {
+export const Cart = async (): Promise<ComponentView> => {
   const userProducts = await appStorage.getItem('cart')
   const dbProducts = await getFromDatabase('products')
 

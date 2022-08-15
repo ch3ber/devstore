@@ -1,8 +1,9 @@
 import { Layout } from '@components/Layout'
 import { ProductCard } from '@components/ProductCard'
+import { ComponentView } from '@models/component'
 import { getFromDatabase } from '@utils/getFromDababase'
 
-export const Home = async (): Promise<string> => {
+export const Home = async (): Promise<ComponentView> => {
   const products = await getFromDatabase('products')
 
   const view = `

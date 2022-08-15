@@ -1,9 +1,12 @@
-import { routes } from '@router/index.routes'
+import { routes } from '@routes/index.routes'
+import { RouteName, Routes } from '@routes/routes'
 
 export class Router {
   private static instance: Router
 
-  private constructor () {}
+  private constructor () {
+
+  }
 
   public static getInstance (): Router {
     if (!Router.instance) {
@@ -14,15 +17,14 @@ export class Router {
   }
 
   getNameRoute (): string {
-    return (
-      window.location.hash.slice(1).toLocaleLowerCase().split('/')[1] || 'root'
-    )
+    const routeName = window.location.hash.slice(1).toLocaleLowerCase().split('/')[1]
+    if (routeName === '') return 'root'
+    if (!routes[routeName as RouteName]) return 'error404'
+    return routeName
   }
 
   async getContentOfRoute (): Promise<string> {
-    const route = this.getNameRoute()
-    return routes[route]
-      ? await routes[route].template()
-      : routes.error404.template()
+    const name = this.getNameRoute()
+    return await routes[name as RouteName].template()
   }
 }

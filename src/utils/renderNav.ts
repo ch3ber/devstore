@@ -3,7 +3,7 @@ import { Nav } from '@components/Nav'
 import { user, logIn, logOut } from '@login/index'
 import { renderInHtml } from './renderInHtml'
 import { loadListener } from './loadListeners'
-import { HTML_IDS } from '@models/elementsID'
+import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID'
 
 export const renderNav = async (): Promise<void> => {
   user.getUserAuth()
@@ -12,6 +12,6 @@ export const renderNav = async (): Promise<void> => {
 
   // load eventlisteners after render app
   user.getUserAuth()
-    ? loadListener('logOutButton', 'click', logOut)
-    : loadListener('logInButton', 'click', logIn)
+    ? loadListener(BUTTONS_IDS.LOG_OUT, 'click', logOut)
+    : loadListener(BUTTONS_IDS.LOG_IN, 'click', logIn)
 }

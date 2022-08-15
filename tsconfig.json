@@ -11,6 +11,7 @@
       "@models/*": ["models/*"],
       "@cart": ["cart.ts"],
       "@config": ["config.ts"],
+      "@routes/*": ["routes/*"],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
