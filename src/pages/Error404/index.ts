@@ -1,5 +1,5 @@
 import { Layout } from '@components/Layout'
-import { ComponentView } from '@models/component'
+import { ComponentView } from '@models/component.model'
 
 export const Error404 = (): ComponentView => {
   const view = `
