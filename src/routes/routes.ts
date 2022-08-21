@@ -1,9 +1,8 @@
-import { ComponentView } from '@models/component'
+import { ComponentView } from '@models/component.model'
 
 export enum ROUTE_PATHS {
   ROOT = '/',
   CART = '/cart',
-  LOGIN = '/login',
   ERROR404 = '/error404',
 }
 
@@ -12,11 +11,10 @@ export type Route = {
   template: () => Promise<ComponentView> | ComponentView
 }
 
-export type RouteName = 'root' | 'cart' | 'login' | 'error404'
+export type RouteName = 'root' | 'cart' | 'error404'
 
 export interface Routes {
   root: Route,
   cart: Route,
-  login: Route,
   error404: Route,
 }

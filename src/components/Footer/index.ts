@@ -1,4 +1,4 @@
-import { ComponentView } from '@models/component'
+import { ComponentView } from '@models/component.model'
 
 export const Footer = (): ComponentView => {
   const view = `

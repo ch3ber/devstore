@@ -1,7 +1,7 @@
 import { Router } from '@router/index'
 import { refreshUI } from '@utils/refreshUI'
 import { cart } from '@cart'
-import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID'
+import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID.model'
 
 export const loadListener = (id: BUTTONS_IDS | HTML_IDS, type: string, func: () => void): void => {
   const element: HTMLElement = document.getElementById(`${id}`)!

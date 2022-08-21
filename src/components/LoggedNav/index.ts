@@ -1,5 +1,5 @@
-import { ComponentView } from '@models/component'
-import { BUTTONS_IDS } from '@models/elementsID'
+import { ComponentView } from '@models/component.model'
+import { BUTTONS_IDS } from '@models/elementsID.model'
 
 export const LoggedNav = (): ComponentView => {
   const LINK_STYLES =

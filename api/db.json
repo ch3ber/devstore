@@ -1,69 +1,46 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Invertocat Hoodie",
       "price": 60,
       "preview": "../src/assets/img/Invertocat_2.0_Hoodie_Mock_GithubShop-1_882x882.webp",
       "description": "Black, white and has the GitHub logo! the best hoodie you can buy"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Invertocat Pride Hoodie",
       "price": 60,
       "preview": "../src/assets/img/WebShop_Hoodie_Pride2022_Black_Pride_882x882.webp",
       "description": "Black, white and has the GitHub logo! the best hoodie you can buy."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Logo Sticker Pack",
       "price": 5,
       "preview": "../src/assets/img/Capsule_Pack_6_882x882.webp",
       "description": "Do you like stickers? me too. You can find many stickers in this fabulous pack"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Invertocat 2.0 Beanie",
       "price": 22,
       "preview": "../src/assets/img/Webshop_18949_146_IE313_Black_1_882x882.webp",
       "description": "Keep your head warm and the code flowing with the updated Invertocat 2.0"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "CORKCICLE Canteen",
       "price": 52,
       "preview": "../src/assets/img/Proof_20682_100484-006_IE313_1_882x882.webp",
       "description": "25 oz. triple insulated, vacuum sealed canteen with easy-grip flag sides and non-slip bottom."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "npm shirt",
       "price": 30,
       "preview": "../src/assets/img/WebShop_TShirt_NPM_v3_M_VintageBlk_882x882.webp",
       "description": "Natural potato magnet. Nervously placed memes. Novel programming merchandise."
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "Eber Alejo",
-      "img": "../src/assets/img/user-1.jpg",
-      "money": 9999,
-      "isLogged": false
-    },
-    {
-      "id": 2,
-      "name": "Mario Bros",
-      "img": "../src/assets/img/user-1.jpg",
-      "money": 2835,
-      "isLogged": false
-    },
-    {
-      "id": 3,
-      "name": "Nombre Random",
-      "img": "../src/assets/img/user-1.jpg",
-      "money": 1854,
-      "isLogged": false
     }
   ]
 }

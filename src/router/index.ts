@@ -1,5 +1,5 @@
 import { routes } from '@routes/index.routes'
-import { RouteName, Routes } from '@routes/routes'
+import { RouteName } from '@routes/routes'
 
 export class Router {
   private static instance: Router

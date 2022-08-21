@@ -1,6 +1,5 @@
 import { Home } from '@pages/Home'
 import { Cart } from '@pages/Cart'
-import { Login } from '@pages/Login'
 import { Error404 } from '@pages/Error404'
 import { Routes, ROUTE_PATHS } from '@routes/routes'
 
@@ -12,10 +11,6 @@ export const routes: Routes = {
   cart: {
     path: ROUTE_PATHS.CART,
     template: Cart
-  },
-  login: {
-    path: ROUTE_PATHS.LOGIN,
-    template: Login
   },
   error404: {
     path: ROUTE_PATHS.ERROR404,
