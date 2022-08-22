@@ -7,8 +7,8 @@ import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID.model'
 
 export const renderNav = async (): Promise<void> => {
   GetUserAuth.getAuth()
-    ? await renderInHtml(LoggedNav(), HTML_IDS.NAV)
-    : await renderInHtml(Nav(), HTML_IDS.NAV)
+    ? await renderInHtml(LoggedNav, HTML_IDS.NAV)
+    : await renderInHtml(Nav, HTML_IDS.NAV)
 
   // load eventlisteners after render app
   GetUserAuth.getAuth()

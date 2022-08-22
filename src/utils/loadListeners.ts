@@ -9,14 +9,14 @@ export const loadListener = (id: BUTTONS_IDS | HTML_IDS, type: string, func: () 
 }
 
 type Listener = () => void
-type ListenersKey = 'root' | 'cart'
+type ListenersKey = '/' | '/cart'
 interface Listeners {
-  root: Listener[];
-  cart: Listener[];
+  '/': Listener[];
+  '/cart': Listener[];
 }
 
 const listeners: Listeners = {
-  root: [
+  '/': [
     function () {
       const elements = document.querySelectorAll('.addToCardButton')!
       elements.forEach((el) => {
@@ -26,7 +26,7 @@ const listeners: Listeners = {
       })
     }
   ],
-  cart: [
+  '/cart': [
     function () {
       const elements = document.querySelectorAll('.cart__delete-button')!
       elements.forEach((el) => {
@@ -50,8 +50,9 @@ const listeners: Listeners = {
 
 export const loadListeners = (): void => {
   const router = Router.getInstance()
-  const routeName = router.getNameRoute()
-  const haveListeners = listeners[routeName as ListenersKey]
+  const { path } = router.getRouteInfo()
+
+  const haveListeners = listeners[path as ListenersKey]
   if (!haveListeners) return
-  listeners[routeName as ListenersKey].forEach((listener: Listener) => listener())
+  listeners[path as ListenersKey].forEach((listener: Listener) => listener())
 }

@@ -1,1 +1,1 @@
-export type ComponentView = string
+export type ComponentView = string | Promise<string>
