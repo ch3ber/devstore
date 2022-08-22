@@ -1,5 +1,18 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"],
+      "@login/*": ["login/*"],
+      "@utils/*": ["utils/*"],
+      "@router/*": ["router/*"],
+      "@models/*": ["models/*"],
+      "@cart": ["cart.ts"],
+      "@config": ["config.ts"],
+      "@routes/*": ["routes/*"],
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -15,16 +28,6 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "baseUrl": "./src/*",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@pages/*": ["pages/*"],
-      "@pages/*": ["pages/*"],
-      "@login/*": ["login/*"],
-      "@utils/*": ["utils/*"],
-      "@router/*": ["router/*"]
-    }
   },
   "include": ["src"]
 }

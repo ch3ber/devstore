@@ -1,4 +1,4 @@
-import { STORAGE_CONFIG } from '../config'
+import { STORAGE_CONFIG } from '@config'
 
 class AppLocalstorage {
   constructor (sotrageConfig) {
@@ -6,7 +6,6 @@ class AppLocalstorage {
     this.defaultContent = sotrageConfig.content
     this.createStorage()
   }
-
 
   #refreshStorage (content) {
     window.localStorage.setItem(this.storageName, JSON.stringify(content))

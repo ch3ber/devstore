@@ -1,6 +1,7 @@
 import { Layout } from '@components/Layout'
+import { ComponentView } from '@models/component.model'
 
-export const Error404 = () => {
+export const Error404 = (): ComponentView => {
   const view = `
     <main class="flex flex-col justify-center items-center h-screen">
       <h1 class="text-3xl font-bold text-center">Error 404</h1>

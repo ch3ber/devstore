@@ -1,19 +1,27 @@
 import { Router } from '@router/index'
 import { refreshUI } from '@utils/refreshUI'
-import { cart } from '../cart'
+import { cart } from '@cart'
+import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID.model'
 
-export function loadListener (id: string, type: string, func: any) {
+export const loadListener = (id: BUTTONS_IDS | HTML_IDS, type: string, func: () => void): void => {
   const element: HTMLElement = document.getElementById(`${id}`)!
   element.addEventListener(type, func)
 }
 
-const listeners = {
+type Listener = () => void
+type ListenersKey = 'root' | 'cart'
+interface Listeners {
+  root: Listener[];
+  cart: Listener[];
+}
+
+const listeners: Listeners = {
   root: [
     function () {
       const elements = document.querySelectorAll('.addToCardButton')!
       elements.forEach((el) => {
-        el.addEventListener('click', (event: any): void => {
-          cart.addProduct(event)
+        el.addEventListener('click', (event): void => {
+          cart.addProduct(event as MouseEvent)
         })
       })
     }
@@ -22,8 +30,8 @@ const listeners = {
     function () {
       const elements = document.querySelectorAll('.cart__delete-button')!
       elements.forEach((el) => {
-        el.addEventListener('click', async (event: any): Promise<void> => {
-          cart.deleteProduct(event)
+        el.addEventListener('click', async (event): Promise<void> => {
+          cart.deleteProduct(event as MouseEvent)
           await refreshUI()
           loadListeners()
         })
@@ -31,7 +39,7 @@ const listeners = {
     },
     function () {
       const element = document.getElementById('cart__buy-button')!
-      element.addEventListener('click', async () => {
+      element.addEventListener('click', async (): Promise<void> => {
         cart.clear()
         await refreshUI()
         loadListeners()
@@ -40,8 +48,10 @@ const listeners = {
   ]
 }
 
-export const loadListeners = () => {
+export const loadListeners = (): void => {
   const router = Router.getInstance()
   const routeName = router.getNameRoute()
-  listeners[routeName].forEach((listener) => listener())
+  const haveListeners = listeners[routeName as ListenersKey]
+  if (!haveListeners) return
+  listeners[routeName as ListenersKey].forEach((listener: Listener) => listener())
 }

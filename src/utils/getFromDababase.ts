@@ -1,10 +1,8 @@
-export const getFromDatabase = async (query) => {
+export const getFromDatabase = async (query: string): Promise<unknown> => {
   const API_URL = '../../../api/db.json'
-  try {
-    const response = await window.fetch(API_URL)
-    const data = await response.json()
-    return data[query]
-  } catch (error) {
-    console.log('Fetch Error', error)
-  }
+
+  return fetch(API_URL)
+    .then((response) => response.json())
+    .then((json) => json[query])
+    .catch(() => console.error('Error fail to load content'))
 }

@@ -1,9 +1,11 @@
-import { Layout } from '../../components/Layout'
-import { ProductCard } from '../../components/ProductCard'
-import { getFromDatabase } from '../../utils/getFromDababase'
+import { Layout } from '@components/Layout'
+import { ProductCard } from '@components/ProductCard'
+import { ComponentView } from '@models/component.model'
+import { getFromDatabase } from '@utils/getFromDababase'
+import { Product } from '@models/product.model'
 
-export const Home = async (): Promise<string> => {
-  const products = await getFromDatabase('products')
+export const Home = async (): Promise<ComponentView> => {
+  const products = await getFromDatabase('products') as Product[]
 
   const view = `
       <div class="mb-10 mt-14">
@@ -12,15 +14,7 @@ export const Home = async (): Promise<string> => {
       </div>
       <main class="flex flex-wrap gap-10 px-10 justify-center">
         ${products
-          .map((product) =>
-            ProductCard(
-              product.id,
-              product.name,
-              product.price,
-              product.preview,
-              product.description
-            )
-          )
+          .map((product) => ProductCard(product))
           .join('')}
       </main>
   `
