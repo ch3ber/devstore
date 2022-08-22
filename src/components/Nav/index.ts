@@ -13,13 +13,13 @@ export const Nav = (): ComponentView => {
           <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-house"></i></span>Home</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
+          <a href="/#/shirts" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-regular fa-note-sticky"></i></span>Stickers</a>
+          <a href="/#/sticker" class="${LINK_STYLES}"><span><i class="fa-regular fa-note-sticky"></i></span>Stickers</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
+          <a href="/#/products/all" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
         </li>
         <li>
           <button id="${BUTTONS_IDS.LOG_IN}" class="${LINK_STYLES}" ><span><i class="fa-solid fa-right-to-bracket"></i></span>LogIn</button>

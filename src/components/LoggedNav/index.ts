@@ -13,16 +13,16 @@ export const LoggedNav = (): ComponentView => {
           <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-house"></i></span>Home</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
+          <a href="/#/shirts" class="${LINK_STYLES}"><span><i class="fa-solid fa-shirt"></i></span>Shirts</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-regular fa-note-sticky"></i></span>Stickers</a>
+          <a href="/#/sticker" class="${LINK_STYLES}"><span><i class="fa-regular fa-note-sticky"></i></span>Stickers</a>
         </li>
         <li>
-          <a href="/#/" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
+          <a href="/#/products/all" class="${LINK_STYLES}"><span><i class="fa-solid fa-tags"></i></span>All Products</a>
         </li>
         <li>
-          <a href="/#/Cart" class="${LINK_STYLES}"><span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
+          <a href="/#/cart" class="${LINK_STYLES}"><span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
         </li>
         <li>
           <button id=${BUTTONS_IDS.LOG_OUT} class="${LINK_STYLES}" ><span><i class="fa-regular fa-circle-xmark"></i></span>LogOut</button>

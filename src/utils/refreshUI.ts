@@ -4,6 +4,6 @@ import { HTML_IDS } from '@models/elementsID.model'
 
 export const refreshUI = async (): Promise<void> => {
   const router = Router.getInstance()
-  const content = await router.getContentOfRoute()
-  renderInHtml(content, HTML_IDS.APP)
+  const { template } = router.getRouteInfo()
+  await renderInHtml(template, HTML_IDS.APP)
 }
