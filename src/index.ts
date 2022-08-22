@@ -12,16 +12,11 @@ import { Error404 } from '@pages/Error404'
 import { ComponentView } from '@models/component.model'
 
 // components
-import { renderNav } from '@utils/renderNav'
 import { getFromDatabase } from '@utils/getFromDababase'
 import { ProductCard } from '@components/ProductCard'
 import { Product } from '@models/product.model'
 // import { loadListeners } from '@utils/loadListeners'
 // import { refreshUI } from '@utils/refreshUI'
-
-(async () => {
-  await renderNav()
-})()
 
 const router = Router.getInstance()
 
