@@ -16,10 +16,12 @@ import { renderNav } from '@utils/renderNav'
 import { getFromDatabase } from '@utils/getFromDababase'
 import { ProductCard } from '@components/ProductCard'
 import { Product } from '@models/product.model'
-import { loadListeners } from '@utils/loadListeners'
-import { refreshUI } from '@utils/refreshUI'
+// import { loadListeners } from '@utils/loadListeners'
+// import { refreshUI } from '@utils/refreshUI'
 
-await renderNav()
+(async () => {
+  await renderNav()
+})()
 
 const router = Router.getInstance()
 
