@@ -1,9 +1,9 @@
-import { Router } from 'yourrouter'
+import { GetRouteInfo } from 'yourrouter/utils/getRouteInfo'
 import { renderInHtml } from '@utils/renderInHtml'
 import { HTML_IDS } from '@models/elementsID.model'
 
 export const refreshUI = async (): Promise<void> => {
-  const router = Router.getInstance()
-  const { template } = router.getRouteInfo()
-  await renderInHtml(template, HTML_IDS.APP)
+  const getRouteInfo = new GetRouteInfo()
+  const { callback } = getRouteInfo.get()
+  await renderInHtml(callback, HTML_IDS.APP)
 }

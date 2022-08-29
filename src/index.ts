@@ -14,10 +14,13 @@ import { ComponentView } from '@models/component.model'
 import { getFromDatabase } from '@utils/getFromDababase'
 import { ProductCard } from '@components/ProductCard'
 import { Product } from '@models/product.model'
+import { renderNav } from '@utils/renderNav'
+import { renderInHtml } from '@utils/renderInHtml'
+import { HTML_IDS } from '@models/elementsID.model'
+import { loadListeners } from '@utils/loadListeners'
 
 Router.createInstance({
-  path404: '/notFound',
-  renderId: '#app'
+  path404: '/notFound'
 })
 const router = Router.getInstance()
 
@@ -35,10 +38,27 @@ const ProductDetail = async (): Promise<string> => {
   return view
 }
 
-router.addRoute('/', () => Home)
-router.addRoute('/test', () => foo)
-router.addRoute('/cart', () => Cart)
-router.addRoute('/login', () => foo)
-router.addRoute('/products/product/:id', () => ProductDetail)
-router.addRoute('/product/:id', () => ProductDetail)
-router.addRoute('/notFound', () => Error404)
+router.addRoute('/', async () => {
+  await renderNav()
+  await renderInHtml(Home, HTML_IDS.APP)
+  loadListeners()
+})
+router.addRoute('/test', async () => {
+  await renderInHtml(foo, HTML_IDS.APP)
+})
+router.addRoute('/cart', async () => {
+  await renderInHtml(Cart, HTML_IDS.APP)
+  loadListeners()
+})
+router.addRoute('/login', async () => {
+  await renderInHtml(foo, HTML_IDS.APP)
+})
+router.addRoute('/products/product/:id', async () => {
+  await renderInHtml(ProductDetail, HTML_IDS.APP)
+})
+router.addRoute('/product/:id', async () => {
+  await renderInHtml(ProductDetail, HTML_IDS.APP)
+})
+router.addRoute('/notFound', async () => {
+  await renderInHtml(Error404, HTML_IDS.APP)
+})
