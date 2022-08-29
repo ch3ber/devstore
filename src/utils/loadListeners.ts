@@ -1,4 +1,4 @@
-import { Router } from '@router/index'
+import { Router } from 'yourrouter'
 import { refreshUI } from '@utils/refreshUI'
 import { cart } from '@cart'
 import { BUTTONS_IDS, HTML_IDS } from '@models/elementsID.model'

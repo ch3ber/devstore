@@ -22,8 +22,14 @@
     "standard": "16.0.4",
     "tailwindcss": "3.1.7",
     "typescript": "4.7.4",
-    "vite": "3.0.4"
+    "vite": "3.0.4",
+    "yourrouter": "1.0.31"
   },
-  "keywords": ["typescript", "single-page-app", "vanilla-router", "vite"],
+  "keywords": [
+    "typescript",
+    "single-page-app",
+    "vanilla-router",
+    "vite"
+  ],
   "description": "SPA created without javascript frameworks"
 }

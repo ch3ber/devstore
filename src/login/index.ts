@@ -1,9 +1,9 @@
+import { Router } from 'yourrouter'
 import { appStorage } from '@utils/localstorage'
 import { loadListener } from '@utils/loadListeners'
 import { cart } from '@cart'
 import { renderNav } from '@utils/renderNav'
 import { BUTTONS_IDS } from '@models/elementsID.model'
-import { ROUTE_PATHS } from '@routes/routes'
 
 export class LogInUser {
   static async logIn () {
@@ -17,7 +17,8 @@ export class LogOutUser {
   static async logOut () {
     cart.clear()
     appStorage.setItem('isUserLogged', false)
-    window.location.hash = ROUTE_PATHS.ROOT
+    const router = Router.getInstance()
+    router.redyrectTo('/')
     await renderNav()
     loadListener(BUTTONS_IDS.LOG_IN, 'click', LogInUser.logIn)
   }
