@@ -1,5 +1,6 @@
 {
   "name": "devstore",
+  "description": "SPA created without javascript frameworks",
   "version": "2.1.0",
   "scripts": {
     "dev": "vite",
@@ -8,6 +9,9 @@
     "deploy": "vite build && bash predeploy.sh",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "yourrouter": "1.0.6"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.30.7",
@@ -22,14 +26,12 @@
     "standard": "16.0.4",
     "tailwindcss": "3.1.7",
     "typescript": "4.7.4",
-    "vite": "3.0.4",
-    "yourrouter": "1.0.5"
+    "vite": "3.0.4"
   },
   "keywords": [
     "typescript",
     "single-page-app",
     "vanilla-router",
     "vite"
-  ],
-  "description": "SPA created without javascript frameworks"
+  ]
 }
